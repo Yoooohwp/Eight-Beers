@@ -1,28 +1,147 @@
 <!DOCTYPE html>
-<html>
-<head> 
-  <title>Product Cards</title>
-  <link rel = "stylesheet" href = "style.css">
-</head>
-<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>My Web Page</title>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-image: url('backgroundyah.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
 
-<section class = "product"> <!--section buat bab bagian produk-->
-  
-  <div class="card"> <!--div class utk subbab -->
-    <div class="gambar">
-      <img src="mcdlogo.png">
+  <body>
+
+    <header>
+      <nav>
+        <div class="logo">
+         <img src="gatauini-removebg-preview.png" height="100">
+        </div>
+        <div class="buatnav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="product.html">Products</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="isi-hlm">
+      <div class="gambar-isi">
+        <img src="botols.png" height="1700">
+      </div>
+
+      <div class="box">
+
+        <div>
+          <img src="es.png" height="240">
+        </div>
+        <div>
+          <img src="es.png" height="350">
+        </div>
+        <div>
+          <img src="es.png" height="200">
+        </div>
+        <div>
+          <img src="es.png" height="170">
+        </div>
+
+        <div class="btol">
+          <img src="Juudl.png" height="2000">
+          <style>
+            .btol {
+              position: absolute;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+              margin-top: -70px;
+            }
+          </style>
+        </div>
+
+      </div>
+
     </div>
-    <div class="deskripsi">
-      <h2> Mcd Logo </h2>
-      <p>
-        halohalo hai sa sgt sk mcd ente tara boleh bertanya 😜
-      </p>
-      <h2>Rp 1.4M!!</h2>
-      <a href="">SHOP NOW</a>
+
+    <div class="button-see-product-info">
+      <a href="product.html">
+        <img src="siproduk.png" height="90">
+      </a>
     </div>
-  </div>
 
-</section> <!--kalo mau bagian lain kyk navigasi dll bikin sektion baru*/-->
+    <div class="mata">
+      <img src="matata.png" height="2000">
+    </div>
 
-</body>
+    <div class="gambarjs">
+      <img id="gambr" src="m7l.png" height="500">
+      <script>
+        const elementImg = document.getElementById("gambr");
+        const listImage = ["m7l.png", "m7t.png", "m14l.png", "m14t.png"];
+        let i = 0;
+      
+        function gantiGbr() {
+          // Step 1: Fade out
+          elementImg.style.opacity = 0;
+      
+          // Step 2: Setelah setengah detik, ganti gambar dan fade in
+          setTimeout(() => {
+            elementImg.src = listImage[i];
+            elementImg.style.opacity = 1;
+            i = (i + 1) % listImage.length;
+          }, 500); // 500ms = setengah dari 1 detik
+        }
+      
+        setInterval(gantiGbr, 2000); // Ganti setiap 5 detik
+      </script>
+
+      <style>
+        .gambarjs{
+          margin-top: -1140px;
+          #gambr {transition: opacity 2s ease-in-out;}
+          margin-left: 100px;
+        }
+
+      </style>
+
+      <div class="teksn"><img src="teks.png" height="1400"></div>
+      <style>
+        .teksn{
+          margin-top: -530px;
+          margin-left: 340px;
+          z-index: 100;
+        }
+      </style>
+    </div>
+    
+    <div class="matata">
+      <img src="matata (2).png" height="900">
+      <div class="bestseller">
+        <img src="matata (3).png" height="200">
+      </div>
+    </div>
+
+
+    
+
+    
+      
+  </body>
+
+
 </html>
+
+
+    
+
+    
