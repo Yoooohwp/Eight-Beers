@@ -1,1 +1,190 @@
 
+nav {
+  display: flex;
+  justify-content: space-between; /* ← penting! */
+  align-items: center;
+  position: fixed;
+  width: 100%;        /* biar nav-nya full sepanjang layar */
+  top: 5%;
+  left: 75%;
+  padding: 10px 30px; /* kasih ruang kiri-kanan */
+  z-index: 1000;      /* biar nav di atas elemen lain */
+}
+
+.buatnav {
+  display: flex;
+  gap: 20px; /* kasih jarak antar link */
+}
+
+.buatnav a {
+  text-decoration: none;
+  color: white;       /* atau warna sesuai background */
+  font-weight: 600;
+}
+
+
+.logo img{
+  cursor: pointer;
+}
+
+.body{
+  height: 600px;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 500px 100px;
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.item img{
+  margin-top: 15px;
+}
+
+.isi-hlm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.box div{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+}
+
+.box div:nth-child(1){
+  top: 98%;
+  left: 2%;
+  animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(2){
+  top: 70%;
+  left: 80%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(3){
+  top: 80%;
+  left: 90%;
+  animation: animate 20s linear infinite;
+}
+
+.box div:nth-child(4){
+  top: 90%;
+  left: 15%;
+  animation: animate 20s linear infinite;
+}
+
+.box div:nth-child(5) {
+  top: 24%;
+  left: 1%;
+  animation: animates 3s ease-out forwards;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(400px);
+    opacity: 1s;
+  }
+  100% {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+
+@keyframes animates {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 1; 
+  }
+}
+
+.button-see-product-info img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -60px;
+  margin-left: 485px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo{
+  top: 1%;
+  left: 1%;
+  position: fixed;
+}
+
+.mata {
+  display: flex;
+  justify-content: center;
+  margin-top: -350px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.mata img {
+  border-radius: 20%;
+}
+
+.m7t {
+  position: relative;
+}
+
+.teksawal {
+  z-index: 100;
+  cursor: pointer;
+}
+
+.deskripsi {
+  position: absolute;
+  top: 500px;
+  left: 30px;
+  opacity: 1;
+  transition: opacity 0.5s ease, top 0.5s ease;
+  z-index: 10;
+  color: white;
+}
+
+/* Hover di .teksawal, munculkan .deskripsi */
+.teksawal:hover + .deskripsi {
+  opacity: 1;
+  top: 400px;
+}
+
+
+
+.matata {
+  margin-top: -1300px;
+  margin-left: 600px;
+  position: relative;
+}
+
+.bestseller {
+  position: relative; /* Define the bestseller container */
+}
+
+.matata .bestseller img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(555px, -850px); /* ganti angka sesuai kebutuhan */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none; /* ini opsional supaya tidak menangkap hover */
+}
+
+.matata:hover + .bestseller img {
+  opacity: 1; /* Show the image only when .matata is hovered */
+}
