@@ -37,7 +37,7 @@
 
     <div class="isi-hlm">
       <div class="gambar-isi">
-        <img src="botols.png" height="1700">
+        <img src="botols-min.png" height="1700">
       </div>
 
       <div class="box">
@@ -75,7 +75,7 @@
 
     <div class="button-see-product-info">
       <a href="product.html">
-        <img src="siproduk.png" height="90">
+        <img src="siproduk-min.png" height="90">
       </a>
     </div>
 
@@ -91,10 +91,9 @@
         let i = 0;
       
         function gantiGbr() {
-          // Step 1: Fade out
+
           elementImg.style.opacity = 0;
       
-          // Step 2: Setelah setengah detik, ganti gambar dan fade in
           setTimeout(() => {
             elementImg.src = listImage[i];
             elementImg.style.opacity = 1;
@@ -102,7 +101,7 @@
           }, 500); // 500ms = setengah dari 1 detik
         }
       
-        setInterval(gantiGbr, 2000); // Ganti setiap 5 detik
+        setInterval(gantiGbr, 2000); 
       </script>
 
       <style>
