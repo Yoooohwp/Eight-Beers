@@ -1,24 +1,23 @@
 
 nav {
   display: flex;
-  justify-content: space-between; /* ← penting! */
   align-items: center;
   position: fixed;
-  width: 100%;        /* biar nav-nya full sepanjang layar */
+  width: 100%;       
   top: 5%;
   left: 75%;
-  padding: 10px 30px; /* kasih ruang kiri-kanan */
-  z-index: 1000;      /* biar nav di atas elemen lain */
+  padding: 10px 30px; 
+  z-index: 1000;     
 }
 
 .buatnav {
   display: flex;
-  gap: 20px; /* kasih jarak antar link */
+  gap: 20px;
 }
 
 .buatnav a {
   text-decoration: none;
-  color: white;       /* atau warna sesuai background */
+  color: white;     
   font-weight: 600;
 }
 
@@ -247,6 +246,36 @@ nav {
 html {
   scroll-behavior: smooth;
 }
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer-content ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-content ul li a {
+    color: #f0c674;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-content ul li a:hover {
+    text-decoration: underline;
+}
+
 
 html, body {
   margin: 0;
