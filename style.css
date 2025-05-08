@@ -1,0 +1,255 @@
+
+nav {
+  display: flex;
+  justify-content: space-between; /* ← penting! */
+  align-items: center;
+  position: fixed;
+  width: 100%;        /* biar nav-nya full sepanjang layar */
+  top: 5%;
+  left: 75%;
+  padding: 10px 30px; /* kasih ruang kiri-kanan */
+  z-index: 1000;      /* biar nav di atas elemen lain */
+}
+
+.buatnav {
+  display: flex;
+  gap: 20px; /* kasih jarak antar link */
+}
+
+.buatnav a {
+  text-decoration: none;
+  color: white;       /* atau warna sesuai background */
+  font-weight: 600;
+}
+
+
+.logo img{
+  cursor: pointer;
+}
+
+.body{
+  height: 600px;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 500px 100px;
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.item img{
+  margin-top: 15px;
+}
+
+.isi-hlm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.box div{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+}
+
+.box div:nth-child(1){
+  top: 98%;
+  left: 2%;
+  animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(2){
+  top: 70%;
+  left: 80%;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(3){
+  top: 80%;
+  left: 90%;
+  animation: animate 20s linear infinite;
+}
+
+.box div:nth-child(4){
+  top: 90%;
+  left: 15%;
+  animation: animate 20s linear infinite;
+}
+
+.box div:nth-child(5) {
+  top: 24%;
+  left: 1%;
+  animation: animates 3s ease-out forwards;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(400px);
+    opacity: 1s;
+  }
+  100% {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+
+@keyframes animates {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 1; 
+  }
+}
+
+.button-see-product-info img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -60px;
+  margin-left: 485px;
+  position: relative;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.button-see-product-info img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.logo{
+  top: 1%;
+  left: 1%;
+  position: fixed;
+}
+
+.mata {
+  display: flex;
+  justify-content: center;
+  margin-top: -350px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.mata img {
+  border-radius: 20%;
+}
+
+.m7t {
+  position: relative;
+}
+
+
+
+.m7t .teksawal {
+  top: -580px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.m7t .deskripsi {
+  position: absolute;
+  color: white;
+  top: 470px;
+  left: 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease, top 0.5s ease;
+  z-index: 1;
+}
+
+
+
+.teksawal:has(img:hover) + .deskripsi {
+  background-color: white 0.5;
+  opacity: 1;
+  top: 200px;
+  left: 30px;
+  color: white;
+}
+
+
+.m7l .teksawal {
+  top: -600px;
+  position: relative;
+  z-index: 4;
+  cursor: pointer;
+}
+
+.m7l .deskripsi {
+  position: absolute;
+  color: white;
+  top: 1550px;
+  left: 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease, top 0.5s ease;
+  z-index: 10;
+}
+
+.m7l .teksawal:has(img:hover) + .deskripsi {
+  background-color: white 0.5;
+  top: 1200px;
+  opacity: 1;
+  z-index: 0;
+  color: white;
+}
+
+
+.matata {
+  margin-top: -1300px;
+  margin-left: 600px;
+  position: relative;
+}
+
+.bestseller {
+  position: relative; 
+}
+
+.matata .bestseller img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(555px, -850px); 
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none; 
+}
+
+.matata:hover + .bestseller img {
+  opacity: 1; 
+}
+
+.about {
+  color: white;
+  position: relative; 
+  top: -350px; 
+  font-size: 40px;
+  left: 30px;
+}
+
+.about p{
+  font-size: 27px;
+}
+
+.about img{
+  position: relative
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

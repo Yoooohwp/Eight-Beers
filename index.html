@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>My Web Page</title>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-image: url('backgroundyah.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      <nav>
+        <div class="logo">
+         <img src="gatauini-removebg-preview.png" height="100">
+        </div>
+        <div class="buatnav">
+          <a href="index.html">Home</a>
+            <a href="#about-section">About</a>
+          <a href="product.html">Products</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="isi-hlm">
+      <div class="gambar-isi">
+        <img src="botols.png" height="1700">
+      </div>
+
+      <div class="box">
+
+        <div>
+          <img src="es.png" height="240">
+        </div>
+        <div>
+          <img src="es.png" height="350">
+        </div>
+        <div>
+          <img src="es.png" height="200">
+        </div>
+        <div>
+          <img src="es.png" height="170">
+        </div>
+
+        <div class="btol">
+          <img src="Juudl.png" height="2000">
+          <style>
+            .btol {
+              position: absolute;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+              margin-top: -70px;
+            }
+          </style>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="button-see-product-info">
+      <a href="product.html">
+        <img src="siproduk.png" height="90">
+      </a>
+    </div>
+
+    <div class="mata">
+      <img src="matata.png" height="2000">
+    </div>
+
+    <div class="gambarjs">
+      <img id="gambr" src="m7l.png" height="500">
+      <script>
+        const elementImg = document.getElementById("gambr");
+        const listImage = ["m7l.png", "m7t.png", "m14l.png", "m14t.png"];
+        let i = 0;
+      
+        function gantiGbr() {
+          elementImg.style.opacity = 0;
+      
+          setTimeout(() => {
+            elementImg.src = listImage[i];
+            elementImg.style.opacity = 1;
+            i = (i + 1) % listImage.length;
+          }, 500); 
+        }
+      
+        setInterval(gantiGbr, 2000); 
+      </script>
+
+      <style>
+        .gambarjs{
+          margin-top: -1140px;
+          #gambr {transition: opacity 2s ease-in-out;}
+          margin-left: 100px;
+        }
+
+      </style>
+
+      <div class="teksn"><img src="teks.png" height="1400"></div>
+      <style>
+        .teksn{
+          margin-top: -530px;
+          margin-left: 340px;
+          z-index: 100;
+        }
+      </style>
+    </div>
+    
+    <div class="matata">
+      <img src="matata (2).png" height="900">
+      <div class="bestseller">
+        <img src="matata (3).png" height="200">
+      </div>
+    </div>
+
+    <div class="about" id="about-section">
+      <h1>About.</h1>
+      <img src="Screen Shot 2025-05-02 at 6.15.46 PM.png" height="550">
+      <img src="Eight Beers.png" height ="550">
+      <p>Eight Beers lahir dari eksplorasi rasa dan fermentasi lokal. 
+        Kami memadukan kesegaran pisang matang<br> dengan ragi premium untuk 
+        menghasilkan pengalaman minum yang tak terlupakan—ringan,<br> menyenangkan, 
+        dan penuh karakter tropis.</p>
+      <h1>What We Stand For:</h1>
+      <div style="margin: 20px; padding: 20px;"></div>
+        <img src="24.png" height="550" style="margin: 20px; padding: 5px;">
+        <img src="25.png" height="550" style="margin: 20px; padding: 5px;">
+        <img src="matata (5).png" height="550" style="margin: 20px; padding: 5px;">
+      </div>
+      <h4 style="position:relative; font-weight: bold; font-size: 40px; color: white; top: -400px; left: 80px;">
+        Local Goodness<h4>
+      <p style="font-weight: normal; font-size: 20px; color: white; position: relative; top: -430px; left: 70px;">At Eight Beers, we celebrate the warmth <br> of togetherness and local pride.
+        Each<br>bottle is crafted with bananas grown by <br>nearby farmers — creating not just a <br>
+        beverage, but a bond with the people<br> and land that nurture it.</p>
+      <h4 style="position:relative; font-weight: bold; font-size: 40px; color: white; top: -707px; left: 485px;">
+          Innovation in Brewing<h4>
+      <p style="font-weight: normal; font-size: 20px; color: white; position: relative; top: -740px; left: 485px;">Inspired by tradition, driven by curiosity. Our<br> brewing process blends classic fermentation <br> methods with bold new ideas — giving rise to<br> eight distinct Banana Beers
+        <br> brewing process blends classic fermentation <br>
+          methods with bold new ideas — giving rise to<br> 
+          eight distinct Banana Beers that challenge<br>
+           convention and invite discovery.</p>
+           <h4 style="position:relative; font-weight: bold; font-size: 40px; color: white; top: -1065px; left: 970px;">
+        Open Culture<h4>
+      <p style="font-weight: normal; font-size: 20px; color: white; position: relative; top: -1100px; left: 965px;">We believe in transparency, collaboration,<br>
+         and play. Our community welcomes makers,<br> drinkers, and thinkers to co-create, explore,<br>
+          and toast to the unexpected. With every<br> bottle, you’re part of something open and alive.
+
+
+    </div>
+
+
+    
+
+    
+      
+  </body>
+
+
+</html>
+
+
+    
+
+    
